@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.w3-example{background-color:#f1f1f1;padding:0.01em 16px;margin:20px 0;box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important}
+</style>
+</head>
+<body class="w3-container">
+
+<div class="w3-example">
+  <h3>Example</h3>
+  <p>Format text in a document:</p>
+  <div class="w3-code copyarea notranslate htmlHigh">
+    <span style="color:brown"><span style="color:mediumblue">&lt;</span>code<span style="color:mediumblue">&gt;</span></span>A piece of computer code<span style="color:brown"><span style="color:mediumblue">&lt;</span>/code<span style="color:mediumblue">&gt;</span></span>
+ </div>
+ <button class="copybtn w3-btn w3-margin-bottom w3-green">Copy to Clipboard</button>
+</div>
+
+<script>
+var btns = document.getElementsByClassName("copybtn");
+
+function() {
+  let btn = this;
+  let selection = window.getSelection();
+  let range = document.createRange();
+  range.selectNodeContents(btn.parentElement.getElementsByClassName("copyarea")[0]);
+  selection.removeAllRanges();
+  selection.addRange(range);
+  document.execCommand("Copy");
+  selection.removeAllRanges();
+}
+</script>
+
+</body>
+</html>
