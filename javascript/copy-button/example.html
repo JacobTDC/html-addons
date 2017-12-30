@@ -20,16 +20,16 @@
 
 <script>
 var btns = document.getElementsByClassName("copybtn");
-
-function() {
-  let btn = this;
-  let selection = window.getSelection();
-  let range = document.createRange();
-  range.selectNodeContents(btn.parentElement.getElementsByClassName("copyarea")[0]);
-  selection.removeAllRanges();
-  selection.addRange(range);
-  document.execCommand("Copy");
-  selection.removeAllRanges();
+for (i = 0; i < btns.length; i++) { 
+  btns[i].addEventListener("click", function() {
+    let selection = window.getSelection();
+    let range = document.createRange();
+    range.selectNodeContents(this.parentElement.getElementsByClassName("copyarea")[0]);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    document.execCommand("Copy");
+    selection.removeAllRanges();
+  });
 }
 </script>
 
