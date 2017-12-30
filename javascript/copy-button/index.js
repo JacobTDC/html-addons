@@ -1,5 +1,5 @@
 /*! (c) Jacob Story | github.com/JacobTDC/html-addons/blob/master/LICENSE */
-(function() {window.addEventListener('load', () => {
+!(function() {window.addEventListener('load', () => {
   var btns = document.getElementsByClassName("copybtn");
   for (i = 0; i < btns.length; i++) { 
     btns[i].addEventListener("click", function() {
